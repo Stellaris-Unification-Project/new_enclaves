@@ -36,6 +36,7 @@
   NAME_Angel_Iriels:0 "Angel Iriels"
   format.ne_shroud.1: "$NAME_NESHR_Country$"
   # Machine Enclave
+  NAME_NEMAC_System: "Kaiser"
   NAME_NEMAC_Star: "Core"
   NAME_NEMAC_Country: "Prime Machines"
   NAME_NEMAC_Fleet: "Interface"

@@ -53,6 +53,9 @@ create_machine_species = {
 			trait = trait_robot_sapient_machine
 			trait = trait_robot_emotion_emulators
 		}
+		effect = {
+			save_event_target_as = machine_species
+		}
 	}
 }
 
