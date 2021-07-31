@@ -1,0 +1,45 @@
+namespace = nesla
+
+country_event = {
+	id  = nesla.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		num_fleets < 1
+	}
+	
+	immediate = {
+		create_leader = {
+			class = admiral
+			species = owner_main_species
+			name = random
+			skill = 1
+			traits = {
+				trait = random_trait
+				trait = random_trait
+			}
+			effect = {
+				create_fleet = {
+					name = "Raiders"
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random
+							design = "NAME_Pirate_Galleon"
+							graphical_culture = pirate_01
+							upgradable = no
+							effect = {
+								set_ship_flag = slave_hunter_ship_1
+							}
+						}
+						set_location = event_target:slave_hunter_home
+						assign_leader = prev
+						set_fleet_flag = slave_hunter_fleet_1
+						# fleet_event = { id = slave_hunter.5 }
+					}
+				}
+			}
+		}
+	}
+}

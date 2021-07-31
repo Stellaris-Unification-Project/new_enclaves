@@ -54,3 +54,14 @@ ne_shroud_trade_deal_3 = {
 	country_base_sr_zro_produces_add = 3
 	country_base_energy_produces_add = -60
 }
+
+# Destiny Corporation
+ne_slave_camp = {
+	pop_environment_tolerance = 1
+	pop_happiness_positive_slave = -1
+	pop_growth_speed = -1
+	planet_housing_add = 2
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_slave_colony.dds"
+	icon_frame = 2
+}

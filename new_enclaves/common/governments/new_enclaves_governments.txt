@@ -42,3 +42,18 @@ gov_ne_shroud = {
 		base = 10000
 	}
 }
+
+# Slaver Enclave
+gov_ne_slaver = {
+	ruler_title = RT_BOSS
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_slave_traders
+	}
+
+	weight = {
+		base = 100000
+	}
+}

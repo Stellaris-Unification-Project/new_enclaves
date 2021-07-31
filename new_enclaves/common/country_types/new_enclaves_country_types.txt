@@ -6,6 +6,7 @@ ne_enclave = {
 	blocks_piracy = yes
 	show_in_contacts_list = yes
 	can_have_their_comms_shared = yes
+	government = yes
 	is_enclave = yes
 	ai = {
 		enabled = no
@@ -19,13 +20,38 @@ ne_enclave = {
 	custom_diplomacy = yes
 	custom_opinion = yes
 	modules = {
-		basic_technology_module = {
-		}
-		standard_event_module = {
-		}
-		exclusive_diplomacy_module = {
-		}
-		# Nothing is allowed, but we need this for relationships.
-		#basic_technology_module = {}
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.
+	}
+}
+
+ne_slave_hunters = {
+	has_complete_sensor = yes
+	show_in_contacts_list = yes
+	share_communications = no
+	playable = no
+	has_capital = no
+	diplomatic_wars = no
+	relations = no
+	attack_unarmed_orbital_stations = no
+
+	ai = {
+		enabled = no
+	}
+	faction = {
+		#pirate = yes
+		hostile = no
+		neutral = yes
+		#auto_delete = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		hostile_when_attacked = yes
+	}
+	modules = {
+		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.
+		all_technology_module = {}
+		standard_event_module = {}
 	}
 }

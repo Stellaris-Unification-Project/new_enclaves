@@ -19,6 +19,12 @@ empire_name_parts_list = {
 		"Spiritualist Enclave" = 10
 	}
 }
+empire_name_parts_list = {
+	key = "ne_slaver_names"
+	parts = {
+		"Slaver Enclave" = 10
+	}
+}
 
 empire_name_format = {
 	random_weight = {
@@ -55,4 +61,16 @@ empire_name_format = {
 	}
 	format = "format.ne_shroud.1"
 	noun = "<ne_shroud_names>"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = ne_enclave
+			has_government = gov_ne_slaver
+		}
+	}
+	format = "format.ne_slaver.1"
+	noun = "<ne_slaver_names>"
 }

@@ -44,3 +44,12 @@
   NAME_Unity_01: "Prime Unit"
   NAME_EIRPLUSONE: "EIR+1"
   format.ne_machine.1: "$NAME_NEMAC_Country$"
+  # Slaver Enclave
+  NAME_NESLA_System: "Teralion"
+  NAME_NESLA_Star: "JoniMega"
+  NAME_NESLA_Planet: "Labour Camp"
+  NAME_NESLA_Country: "Destiny Corporation"
+  NAME_NESLA_Fleet: "Employment Exchange"
+  NAME_NESLA_Enclave_Station: "Desperation"
+  NAME_Slaver_Battleship: "Distress"
+  format.ne_slaver.1: "$NAME_NESLA_Country$"

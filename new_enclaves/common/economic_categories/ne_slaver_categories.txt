@@ -1,0 +1,12 @@
+planet_test_subjects = {
+	parent = planet_jobs
+}
+planet_workers = {
+	parent = planet_jobs
+}
+planet_garden_servants = {
+	parent = planet_jobs
+}
+planet_gladiators = {
+	parent = planet_jobs
+}

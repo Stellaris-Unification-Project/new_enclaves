@@ -1,0 +1,61 @@
+ne_building_arena = {
+	base_cap_amount = 1
+	base_buildtime = 400
+	category = amenity
+	
+	potential = {
+		owner = {
+			has_country_flag = arena_unlocked
+			has_policy_flag = slavery_allowed
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 4
+		job_gladiator_add = 4
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			volatile_motes = 50
+		}
+		upkeep = {
+			energy = 2
+			volatile_motes = 1
+		}
+	}
+}
+
+ne_building_public_garden = {
+	base_cap_amount = 1
+	base_buildtime = 480
+	category = amenity
+	
+	potential = {
+		owner = {
+			has_country_flag = garden_unlocked
+			has_policy_flag = slavery_allowed
+		}
+	}
+	
+	planet_modifier = {
+		job_garden_servant_add = 2
+		job_entertainer_add = 3
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			exotic_gases = 50
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = 4
+			exotic_gases = 1
+			rare_crystals = 1
+		}
+	}
+}

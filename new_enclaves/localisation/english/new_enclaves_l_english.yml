@@ -26,6 +26,13 @@
   ne_shroud_government: "Shroud Enclave"
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  # Destiny Corporation
+  civic_slave_traders: "Slave Trader"
+  civic_slave_traders_desc: ""
+  gov_ne_slaver: "Slave Trader Enclave"
+  gov_ne_slaver_desc: "Those people have dedicated their lives to the business of buying and selling members of other intelligent species."
+  RT_BOSS: "Boss"
+  NAME_NESLA_Enclave_Station: "Desperation"
   ### Diplomacy Events ###
 ## Hive Enclave
   # First Contact
@@ -259,7 +266,7 @@
   neshr.905b.desc: "We are sad you couldn't accept our truths, fellow creature."
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
-### Traits, Modifiers, Technologies ###
+### Traits, Modifiers, Technologies, Deposits, Ship Sizes ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"
   leader_universal_drone_desc: "A drone from the Universal Hive. Not only is he able to be integrated into any hive, his mere presence can quell any sign of deviance."
@@ -288,6 +295,50 @@
   shrouds_children_guidance_desc: "The Shroud's Children gave us access to their ancient archives. Although much of the material is arcane in nature, it's also rich in knowledge about this physical reality."
   ne_shroud_festival: "Religious Festivals"
   ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
+ ## Destiny Corporation
+  ne_slave_camp: "Slave Camp"
+  ne_slave_camp_desc: "This planet serves as camp to house slaves."
+  d_slave_barracks: "Slave Barracks"
+  d_slave_barracks_desc: "$d_slave_barracks$"
+  d_slaver_control_tower: "Control Tower"
+  d_slaver_control_tower_desc: "$d_slaver_control_tower$"
+  d_slaver_high_security_zone: "High Security Zone"
+  d_slaver_high_security_zone_desc: "$d_slaver_high_security_zone$"
+  d_slaver_research_department: "Research Department"
+  d_slaver_research_department_desc: "$d_slaver_research_department$"
+  ne_slaver_galleon: "Galeon"
+  ne_slaver_galleon_plural: "Galeons"
+  ne_slaver_destroyer: "Destroyer"
+  ne_slaver_destroyer_plural: "Destroyers"
+ ### Jobs ###
+ ## Destiny Corporation
+  planet_test_subjects: "Test Subject Jobs"
+  job_test_subject: "Test Subject"
+  job_test_subject_plural: "Test Subjects"
+  job_test_subject_desc: "These pops act as Test Subjects in different science experiments conducted by their overlords."
+  mod_job_test_subject_add: "$planet_test_subjects$"
+  planet_workers: "Slave Worker Jobs"
+  job_simple_worker: "Slave Worker"
+  job_simple_worker_plural: "Slave Workers"
+  job_simple_worker_desc: "These pops are simple slaves that work in different industries."
+  mod_job_simple_worker_add: "$planet_workers$"
+  planet_garden_servants: "Garden Servant Jobs"
+  job_garden_servant: "Garden Servant"
+  job_garden_servant_plural: "Garden Servants"
+  job_garden_servant_desc: ""
+  mod_job_garden_servant_add: "$planet_garden_servants$"
+  planet_gladiators: "Gladiator Jobs"
+  job_gladiator: "Gladiator"
+  job_gladiator_plural: "Gladiators"
+  job_gladiator_desc: "These pops work as Gladiators to entertain the higher classes."
+  mod_job_gladiator_add: "$planet_gladiators$"
+  mod_job_slave_toiler_add: "$job_slave_toiler$ Jobs"
+ ### Buildings ###
+ ## Destiny Corporation ##
+  ne_building_arena: "Arena"
+  ne_building_arena_desc: "Here are gladiators fighting for the delight of the people.\n\n§YThis building increases the happiness of the free population. The effect of this building grows if the worker is strong or even very strong.\nThis building needs a slave (not a weak one) to function.§!"
+  ne_building_public_garden: "Gardens"
+  ne_building_public_garden_desc: "A place of relaxation and peace.\n\n§YThe effect of this building grows if the worker is charismatic.\nThis building needs a domestic slave to function.§!"
  ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
@@ -298,3 +349,4 @@
   opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
   opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"
   station_enclave_curator_01_key: "Curator Station Enclave"
+  ne_slaver_galleon_key: "Slaver Galeon Section"

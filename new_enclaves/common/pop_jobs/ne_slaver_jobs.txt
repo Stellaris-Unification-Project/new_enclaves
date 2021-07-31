@@ -1,0 +1,168 @@
+gladiator = {
+	category = specialist
+	is_capped_by_modifier = yes
+	building_icon = ne_building_arena
+	clothes_texture_index = 2
+		
+	possible_pre_triggers = {
+		is_enslaved = yes
+	}
+	
+	resources = {
+		category = planet_gladiators
+		produces = {
+			unity = 3
+		}
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 10
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			has_slavery_type = { type = slavery_military }
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_strong
+		}
+		modifier = {
+			planet_amenities_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			planet_amenities_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_weak
+		}
+		modifier = {
+			planet_amenities_add = -2
+		}
+	}	
+		
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+
+garden_servant = {
+	category = specialist
+	is_capped_by_modifier = yes
+	building_icon = ne_building_public_garden
+	clothes_texture_index = 2
+		
+	possible = {
+		can_take_servant_job = yes
+	}
+	
+	resources = {
+		category = planet_garden_servants
+		produces = {
+			unity = 2
+		}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			is_organic_species = yes
+		}
+		pop_housing_usage_add = -0.5
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 4
+		planet_jobs_specialist_produces_mult = 0.015
+		planet_jobs_ruler_produces_mult = 0.025
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			planet_amenities_add = 1
+			planet_jobs_specialist_produces_mult = 0.01
+			planet_jobs_ruler_produces_mult = 0.015
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			planet_amenities_add = -1
+			planet_jobs_specialist_produces_mult = -0.01
+			planet_jobs_ruler_produces_mult = -0.015
+		}
+	}	
+		
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+
+simple_worker = {
+	category = worker
+	is_capped_by_modifier = yes
+	building_icon = ne_building_public_garden
+	clothes_texture_index = 2
+		
+	possible = {
+		hidden_trigger = { exists = owner }
+		worker_job_check_trigger = yes
+		owner = { 
+			is_gestalt = no
+		}
+	}
+	
+	resources = {
+		category = planet_workers
+		produces = {
+			food = 3
+			consumer_goods = 2
+		}
+	}
+		
+	weight = {
+		weight = @worker_job_weight
+	}
+}
+
+test_subject = {
+	category = worker
+	is_capped_by_modifier = yes
+	building_icon = building_clone_vats
+	clothes_texture_index = 2
+	
+	possible_pre_triggers = {
+		is_enslaved = yes
+	}
+	
+	resources = {
+		category = planet_test_subjects
+		produces = {
+			physics_research = 5
+			engineering_research = 5
+			society_research = 15
+		}
+	}
+		
+	weight = {
+		weight = @worker_job_weight
+	}
+}

@@ -515,7 +515,7 @@ ne_shroud_init = {
 						trait = trait_venerable
 					}
 					effect = {
-						save_event_target_as = ne_shroud_species
+						save_event_target_as = shroud_species
 					}
 				}
 				create_country = {
@@ -525,7 +525,7 @@ ne_shroud_init = {
 					civics =	{
 						civic = civic_priesthood_of_the_cycle
 					}
-					species = last_created_species
+					species = event_target:shroud_species
 					flag = {
 						icon = {
 							category = "enclaves"
@@ -557,7 +557,7 @@ ne_shroud_init = {
 							settings = { spawn_debris = no }
 							effect = {
 								set_owner = prev
-									create_ship = {
+								create_ship = {
 									name = random
 									design = "NAME_NESHR_Enclave_Station"
 									graphical_culture = prev
@@ -574,7 +574,7 @@ ne_shroud_init = {
 						}
 						create_leader = {
 							class = ruler
-							species = event_target:ne_shroud_species
+							species = event_target:shroud_species
 							name = random
 							skill = 5
 							effect = {
@@ -604,5 +604,234 @@ ne_shroud_init = {
 		orbit_angle = 2
 		size = 15
 		has_ring = no
+	}
+}
+
+# Slavers
+ne_slaver_init = {
+	name = "NAME_NESLA_System"
+	class = "sc_m_giant"
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			has_leviathans = yes
+			add = 100
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	spawn_chance = 100
+	flags = { ne_slaver_system ne_enclave }
+	planet = {
+		name = "NAME_NESLA_Star"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 70
+	}
+	planet = {
+		class = pc_asteroid
+		orbit_distance = 70
+	}
+	planet = {
+		class = pc_asteroid
+		orbit_distance = 20
+		orbit_angle = { min = 60 max = 90 }
+	}
+	planet = {
+		class = pc_gaia
+		modifier = "pm_hazardous_weather"
+		deposit_blockers = none
+		name = "NAME_NESLA_Planet"
+		orbit_distance = 20
+		orbit_angle = { min = 60 max = 90 }
+		size = 25
+		has_ring = no
+		init_effect = {
+			save_global_event_target_as = slave_hunter_home
+			# Countries init
+				# enclave
+			if = {
+				limit = {
+					NOT = { exists = event_target:ne_slaver_country }
+				}
+				create_species = {
+					name = random
+					class = random_non_machine
+					portrait = random
+					traits = random
+					homeworld = this
+					effect = {
+						save_event_target_as = slaver_species
+					}
+				}
+				create_country = {
+					name = "NAME_NESLA_Country"
+					type = ne_enclave
+					authority = "auth_oligarchic"
+					civics = {
+						civic = civic_slave_traders
+					}
+					species = event_target:slaver_species
+					flag = {
+						icon = {
+							category = "pirate"
+							file = "flag_pirate_2.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "pattern_01.dds"
+						}
+						colors={
+							"orange"
+							"red"
+							"null"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_materialist
+						ethic = ethic_authoritarian
+						ethic = ethic_xenophobe
+					}
+					ignore_initial_colony_error = yes
+					effect = {
+						set_country_flag = ne_slaver_country
+						set_country_flag = ne_country
+						set_graphical_culture = mammalian_01
+						save_global_event_target_as = ne_slaver_country
+						create_fleet = {
+							name = "NAME_NESLA_Fleet"
+							settings = { spawn_debris = no }
+							effect = {
+								set_owner = prev
+								create_ship = {
+									name = random
+									design = "NAME_NESLA_Enclave_Station"
+									graphical_culture = prev
+								}
+								set_location = {
+									target = prevprev
+									angle = random
+									distance = 10
+								}
+								prev = {
+									set_custom_capital_location = prev
+								}
+							}
+						}
+						create_leader = {
+							class = ruler
+							species = event_target:slaver_species
+							name = random
+							skill = 5
+							effect = {
+								save_event_target_as = slaver_leader
+							}
+						}
+						set_leader = event_target:slaver_leader
+					}
+				}
+			}
+				# fleet country
+			create_country = {
+				name = "Slave Hunters"
+				type = ne_slave_hunters
+				authority = "auth_oligarchic"
+				civics = {
+					civic = civic_slaver_guilds
+				}
+				species = event_target:slaver_species
+				flag = {
+					icon = {
+						category = "pirate"
+						file = "flag_pirate_2.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "pattern_01.dds"
+					}
+					colors={
+						"orange"
+						"red"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_materialist
+					ethic = ethic_authoritarian
+					ethic = ethic_xenophobe
+				}
+				ignore_initial_colony_error = yes
+				effect = {
+					set_country_flag = ne_slave_hunter_country
+					country_event = { id = nesla.1 }
+				}
+			}
+			# Planet init
+			set_owner = event_target:ne_slaver_country
+			set_planet_flag = slaver_planet
+			clear_deposits = yes
+			while = {
+				count = 24
+				add_deposit = d_slave_barracks
+			}
+			add_deposit = d_slaver_control_tower
+			add_deposit = d_slaver_high_security_zone
+			add_deposit = d_slaver_research_department
+			add_modifier = {
+				modifier = ne_slave_camp
+				days = -1
+			}
+			
+			add_district = district_city
+			add_building = building_capital
+			add_building = ne_building_arena
+			while = {
+				count = 16
+				create_pop = {
+					species = event_target:ne_slaver_country.owner_species
+				}
+			}
+			
+			while = {
+				count = 27
+				random_country = {
+					limit = {
+						OR = {
+							is_country_type = default
+							is_country_type = nomad
+							is_country_type = dormant_marauders
+							is_country_type = primitive
+							is_country_type = rebel
+							is_country_type = caravaneer_fleet
+						}
+					}
+					save_event_target_as = random_slave_pop
+				}
+				create_pop = {
+					species = event_target:random_slave_pop.owner_species
+				}
+			}
+		}
+	}
+	planet = {
+		class = pc_asteroid
+		orbit_distance = 20
+		orbit_angle = { min = 60 max = 90 }
 	}
 }
