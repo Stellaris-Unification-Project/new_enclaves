@@ -40,10 +40,8 @@ ne_slave_hunters = {
 		enabled = no
 	}
 	faction = {
-		#pirate = yes
 		hostile = no
 		neutral = yes
-		#auto_delete = no
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = no

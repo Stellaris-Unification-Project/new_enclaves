@@ -96,3 +96,26 @@ remove_all_ne_shroud_trade_deal = {
 		remove_modifier = ne_shroud_trade_deal_3
 	}
 }
+
+# Debug scope printing
+ne_print_scope_effect = {
+	log = "------------------------------"
+	log = "- Printing the current scopes (trigger) -"
+	log = "- This: \\[This.GetRealName]"
+	log = "- Root: \\[Root.GetRealName]"
+	log = "- Prev: \\[Prev.GetRealName]"
+	log = "- PrevPrev: \\[Prev.Prev.GetRealName]"
+	log = "- PrevPrevPrev: \\[Prev.Prev.Prev.GetRealName]"
+	log = "- PrevPrevPrevPrev: \\[Prev.Prev.Prev.Prev.GetRealName]"
+	log = "- From: \\[From.GetRealName]"
+	log = "- FromFrom: \\[From.From.GetRealName]"
+	log = "- FromFromFrom: \\[From.From.From.GetRealName]"
+	log = "- FromFromFromFrom: \\[From.From.From.From.GetRealName]"
+	log = "- This's Solar System: \\[This.GetStarName]"
+	log = "- This's Planet: \\[This.Planet.GetRealName]"
+	log = "- This's Sector: \\[This.Sector.GetRealName]"
+	log = "- Root's Solar System: \\[Root.GetStarName]"
+	log = "- Root's Owner's Name: \\[Root.Owner.GetRealName]"
+	log = "- Root's Owner's Capital's Name: \\[Root.Owner.Capital.GetRealName]"
+	log = "------------------------------"
+}

@@ -43,3 +43,91 @@ country_event = {
 		}
 	}
 }
+
+# nesla.10: Port
+country_event = {
+	id = nesla.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = nesla.11 }
+		}
+	}
+}
+
+# nesla.11: Destiny Corporation introduction
+country_event = {
+	id = nesla.11
+	title = neshr.11.name
+	desc = nesla.11.desc
+
+	diplomatic = yes
+	custom_gui = "enclave_trader_window"
+
+	picture_event_data = {
+		portrait = from
+		room = personality_slaving_despots_room
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = neshr.11.a
+		custom_gui = "enclave_trader_option"
+		trigger = {	is_genocidal = no }
+	}
+
+	option = {
+		name = nesla.11.slaver
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			has_policy_flag = slavery_allowed
+			NOR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence 
+			}
+		}
+	}
+
+	option = {
+		name = nesla.11.no_slaver
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			NOT = { has_policy_flag = slavery_allowed }
+			NOR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence 
+			}
+		}
+	}
+
+	option = {
+		name = nesla.11.hive_mind
+		custom_gui = "enclave_trader_option"
+		trigger = {
+			OR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence 
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_trader_option"
+		trigger = {	has_valid_civic = civic_fanatic_purifiers }
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_trader_option"
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
+	}
+
+	option = {
+		name = EXTERMINATE
+		custom_gui = "enclave_trader_option"
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}

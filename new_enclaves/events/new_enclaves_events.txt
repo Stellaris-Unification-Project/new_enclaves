@@ -89,6 +89,9 @@ country_event = {
 					ne_machine_country = {
 						country_event = { id = nemac.10 }
 					}
+					ne_slaver_country = {
+						country_event = { id = nesla.10 }
+					}
 					default = { log_error = "Unexpected new enclave type or missing script flag" }
 				}
 			}
@@ -141,6 +144,9 @@ country_event = {
 			}
 			ne_machine_country = {
 				country_event = { id = nemac.10 scopes = { from = from } }
+			}
+			ne_slaver_country = {
+				country_event = { id = nesla.10 scopes = { from = from } }
 			}
 			default = { log_error = "Unexpected new enclave type or missing script flag" }
 		}

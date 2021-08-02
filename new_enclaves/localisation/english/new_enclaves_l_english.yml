@@ -266,6 +266,11 @@
   neshr.905b.desc: "We are sad you couldn't accept our truths, fellow creature."
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
+## Destiny Corporation
+  nesla.11.desc: "Greetings! We are peaceful traders and not looking for any trouble. If you are not hold back by ridiculus ethical concerns we could establish a lucrative relationship in the future. For centuries we are experts in concerns of avoiding laborer shortages. If you want to buy or sell workers of every kind we are the right contact.\n\nAnd no, of course we are not responsible for any kind of alien kidnapping, if something like this should have happened to you. Obviously we can't' take responsibility for the actions of our suppliers. In the case that your people got into slavery through unfortunate circumstances, we offer to buy them back, for a fair price of course."
+  nesla.11.slaver: "Perfect."
+  nesla.11.no_slaver: "Slavery is barbaric."
+  nesla.11.hive_mind: "We don't understand this concept."
 ### Traits, Modifiers, Technologies, Deposits, Ship Sizes ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"

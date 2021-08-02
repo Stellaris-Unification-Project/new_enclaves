@@ -38,6 +38,7 @@ set_first_contact_starting_stage = {
 						setup_first_contact_path = { TYPE = enclave }
 						country_event = { id = ne.13 days = 720 random = 360 scopes = { from = root.owner } } #they'll establish contact if you aren't quick enough
 					}
+					ne_slave_hunters = { setup_first_contact_path = { TYPE = pirates } }
 					tiyanki = { setup_first_contact_path = { TYPE = tiyanki } }
 					tiyanki_garrison = { setup_first_contact_path = { TYPE = tiyanki } }
 					amoeba = { setup_first_contact_path = { TYPE = amoeba } }

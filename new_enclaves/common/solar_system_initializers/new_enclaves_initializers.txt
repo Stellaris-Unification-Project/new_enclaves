@@ -779,6 +779,7 @@ ne_slaver_init = {
 				ignore_initial_colony_error = yes
 				effect = {
 					set_country_flag = ne_slave_hunter_country
+					establish_communications_no_message = event_target:ne_slaver_country
 					country_event = { id = nesla.1 }
 				}
 			}
