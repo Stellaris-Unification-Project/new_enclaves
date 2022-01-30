@@ -251,8 +251,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_tiyanki_country_type = yes
 						}
 						root.owner = {
@@ -294,8 +296,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_amoeba_country_type = yes
 						}
 						root.owner = {
@@ -337,8 +341,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_crystal_country_type = yes
 						}
 						root.owner = {
@@ -380,8 +386,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_drone_country_type = yes
 						}
 						root.owner = {
@@ -580,8 +588,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_country_type = pirate
 						}
 						root.owner = {
@@ -617,8 +627,10 @@ finish_first_contact_effect = {
 				hidden_effect = {
 					every_country = {
 						limit = {
-							NOT = { is_same_value = root.contact_country }
-							NOT = { has_communications = root.owner }
+							NOR = {
+								is_same_value = root.contact_country
+								has_communications = root.owner
+							}
 							is_country_type = cloud
 						}
 						root.owner = {
